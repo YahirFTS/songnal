@@ -2,6 +2,8 @@ import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 
 const MomentCardScreen = ({ suggestion, onRefresh }) => {
+ 
+
   return (
     <View style={styles.card}>
       <Text style={styles.suggestionText}>{suggestion}</Text>
