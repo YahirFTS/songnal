@@ -8,6 +8,14 @@ import SelectSongScreen from './components/screens/SelectSongScreen.js';
 const Stack = createNativeStackNavigator();
 
 export default function App() {
+  const[notes, setNotes] = React.useState();
+  async function fetchData(){
+    const response = await fetch("http://localhost:8080/notes/1");
+    const data = await response.json();
+    setNotes(data);
+  }
+
+
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName='Home'>
